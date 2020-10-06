@@ -1,8 +1,8 @@
 # Bi0s Tasks
 # These are the intial Tasks that has to be Completed!!
 # Linux
-## Head over to Bandit, an OverTheWire wargame and complete till level 15. Make
-## sure you save the password for each level in the document to save the progress.
+### Head over to Bandit, an OverTheWire wargame and complete till level 15. Make
+### sure you save the password for each level in the document to save the progress.
 
 # ● Programming :
 
@@ -33,7 +33,7 @@
 
 # ● Algorithms
 
-## Implement the following algorithms in Python/C++
+### Implement the following algorithms in Python/C++
 
 ### a. Selection Sort
 ### b. Bubble Sort
@@ -44,9 +44,9 @@
 
 # ● Data Structures
 
-## Create Classes for the following data structures in Python. You may start with
-## creating a Node class with attributes dataval and nextval. A Node class may look like
-## this for a basic Linked List.
+### Create Classes for the following data structures in Python. You may start with
+### creating a Node class with attributes dataval and nextval. A Node class may look like
+### this for a basic Linked List.
 
 ### a. LInked List
 ### b. Doubly Linked List
@@ -57,8 +57,8 @@
 
 # ● Field Related Tasks
 
-## Complete one of the three following tasks set according to your preference of the
-## category you are interested in.
+### Complete one of the three following tasks set according to your preference of the
+### category you are interested in.
 
 ### a. Cryptography
 ### - Implement basic attacks against weak RSA cryptosystem:
