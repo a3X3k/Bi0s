@@ -1,14 +1,14 @@
 # Bi0s Tasks
 # These are the intial Tasks that has to be Completed!!
-##Linux
-Head over to Bandit, an OverTheWire wargame and complete till level 15. Make
-sure you save the password for each level in the document to save the progress.
+# Linux
+## Head over to Bandit, an OverTheWire wargame and complete till level 15. Make
+## sure you save the password for each level in the document to save the progress.
 
 # ● Programming :
 
-For the programming assignment, complete the following handpicked challenges
-from Codeforces. Submissions are expected to be in Python language. Include your
-codeforces user profile in the document with a short writeup on your submission.
+### For the programming assignment, complete the following handpicked challenges
+### from Codeforces. Submissions are expected to be in Python language. Include your
+### codeforces user profile in the document with a short writeup on your submission.
 
 1. 1031A
 2. 1030A
@@ -33,7 +33,7 @@ codeforces user profile in the document with a short writeup on your submission.
 
 # ● Algorithms
 
-Implement the following algorithms in Python/C++
+## Implement the following algorithms in Python/C++
 
 ### a. Selection Sort
 ### b. Bubble Sort
@@ -44,9 +44,9 @@ Implement the following algorithms in Python/C++
 
 # ● Data Structures
 
-Create Classes for the following data structures in Python. You may start with
-creating a Node class with attributes dataval and nextval. A Node class may look like
-this for a basic Linked List.
+## Create Classes for the following data structures in Python. You may start with
+## creating a Node class with attributes dataval and nextval. A Node class may look like
+## this for a basic Linked List.
 
 ### a. LInked List
 ### b. Doubly Linked List
@@ -57,19 +57,19 @@ this for a basic Linked List.
 
 # ● Field Related Tasks
 
-Complete one of the three following tasks set according to your preference of the
-category you are interested in.
+## Complete one of the three following tasks set according to your preference of the
+## category you are interested in.
 
-## a. Cryptography
-- Implement basic attacks against weak RSA cryptosystem:
-- Weak prime factors
-- Wiener's attack
-- Fermat's factorization
-- Small exponent attack
-- Complete Set 1 from The Cryptopals Crypto Challenges
+### a. Cryptography
+### - Implement basic attacks against weak RSA cryptosystem:
+### - Weak prime factors
+### - Wiener's attack
+### - Fermat's factorization
+### - Small exponent attack
+### - Complete Set 1 from The Cryptopals Crypto Challenges
 
 ## b. Web
-i. Implement a basic Shopping cart.
+### i. Implement a basic Shopping cart.
 
 ## c. Android
-i. Create a basic Tic-Tac-Toe application.
+### i. Create a basic Tic-Tac-Toe application.
