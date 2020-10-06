@@ -4,7 +4,7 @@
 Head over to Bandit, an OverTheWire wargame and complete till level 15. Make
 sure you save the password for each level in the document to save the progress.
 
-#● Programming :
+# ● Programming :
 
 For the programming assignment, complete the following handpicked challenges
 from Codeforces. Submissions are expected to be in Python language. Include your
@@ -31,7 +31,7 @@ codeforces user profile in the document with a short writeup on your submission.
 19. 282A
 20. 50A
 
-#● Algorithms
+# ● Algorithms
 
 Implement the following algorithms in Python/C++
 
@@ -42,7 +42,7 @@ d. Binary Search
 e. Check for Balanced Parentheses matching using Stack
 f. Check for existence of cycle in Linked List
 
-#● Data Structures
+# ● Data Structures
 
 Create Classes for the following data structures in Python. You may start with
 creating a Node class with attributes dataval and nextval. A Node class may look like
@@ -55,12 +55,12 @@ d. Stack
 e. Queues
 f. De-Queue
 
-#● Field Related Tasks
+# ● Field Related Tasks
 
 Complete one of the three following tasks set according to your preference of the
 category you are interested in.
 
-#a. Cryptography
+## a. Cryptography
 - Implement basic attacks against weak RSA cryptosystem:
 - Weak prime factors
 - Wiener's attack
@@ -68,8 +68,8 @@ category you are interested in.
 - Small exponent attack
 - Complete Set 1 from The Cryptopals Crypto Challenges
 
-#b. Web
+## b. Web
 i. Implement a basic Shopping cart.
 
-#c. Android
+## c. Android
 i. Create a basic Tic-Tac-Toe application.
