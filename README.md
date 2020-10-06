@@ -35,12 +35,12 @@ codeforces user profile in the document with a short writeup on your submission.
 
 Implement the following algorithms in Python/C++
 
-a. Selection Sort
-b. Bubble Sort
-c. Merge Sort
-d. Binary Search
-e. Check for Balanced Parentheses matching using Stack
-f. Check for existence of cycle in Linked List
+### a. Selection Sort
+### b. Bubble Sort
+### c. Merge Sort
+### d. Binary Search
+### e. Check for Balanced Parentheses matching using Stack
+### f. Check for existence of cycle in Linked List
 
 # ● Data Structures
 
@@ -48,12 +48,12 @@ Create Classes for the following data structures in Python. You may start with
 creating a Node class with attributes dataval and nextval. A Node class may look like
 this for a basic Linked List.
 
-a. LInked List
-b. Doubly Linked List
-c. Circular linked List
-d. Stack
-e. Queues
-f. De-Queue
+### a. LInked List
+### b. Doubly Linked List
+### c. Circular linked List
+### d. Stack
+### e. Queues
+### f. De-Queue
 
 # ● Field Related Tasks
 
