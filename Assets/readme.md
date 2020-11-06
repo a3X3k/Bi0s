@@ -19,9 +19,9 @@
 - I already knew that there is a way to view the source code of any webpage using developer tools of that particular Web browser or say Search Engine. 
 - Finally I ended up with the source code and started inspecting the code since its mentioned as a **hint**.
 
-### Steps I followed :
+### Steps to follow :
 
-1. Clicked on the challenge link - [http://168.119.123.141:6070/](http://168.119.123.141:6070/)
+1. Click on the challenge link - [http://168.119.123.141:6070/](http://168.119.123.141:6070/)
 
 2. We will end up in the webpage which we need to inspect.
  
