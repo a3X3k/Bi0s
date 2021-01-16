@@ -1,4 +1,6 @@
-## INTRODUCTION
+# Crypto Hack
+
+### INTRODUCTION
 &nbsp;
 | Challenge No | Challenge Name |
 | ------ | ------ |
@@ -143,7 +145,7 @@ $ python3 3.py
 ##### Flag - crypto{3nc0d1n6_4ll_7h3_w4y_d0wn}
 &nbsp;
 
-### Bytes and Big Integers
+### XOR Starter
 
 ![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/17.jpeg?raw=true)
 
@@ -211,3 +213,325 @@ Decimal to ASCIi - aloha
 - Use https://www.branah.com/ascii-converter to convert using Online Tool.
 
 ##### Flag - crypto{aloha}
+&nbsp;
+
+### XOR Properties
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/18.jpeg?raw=true)
+
+- There is a built-in function which converts the Hex Stringg into Byte Array.
+
+```sh
+$ bytes.fromhex(hex_string)  # Python ≥ 3
+--> b'\xde\xad\xbe\xef'
+$ bytearray.fromhex(hex_string)
+--> bytearray(b'\xde\xad\xbe\xef')
+
+It returns a bytearray and it reads hex strings with or without space separator.
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/20.jpeg?raw=true)
+
+```sh
+$ xor(ByteArray1, ByteArray2)
+It xors two Byte Array and returns the result.
+```
+
+```sh
+$ from pwn import xor
+
+$ key1 = bytes.fromhex('a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313')
+--> Converting Hex to Byte Array
+
+$ xor_of_key2_key3 = bytes.fromhex('c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1')
+--> Converting Hex to Byte Array
+
+$ flag_of_key1_key2_key3= bytes.fromhex('04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf')
+--> Converting Hex to Byte Array
+
+$ xor_of_key1_key2_key3= xor(key1, xor_of_key2_key3) 
+--> This xors the key1 and key2 and key3
+
+$ flag = xor(flag_of_key1_key2_key3, xor_of_key1_key2_key3)
+--> This xors the result of XOR (key1,key2,key3) and XOR (XOR (key1,key2,key3,flag),XOR (key1,key2,key3))
+
+$ print(flag)
+--> This prints the Flag
+```
+
+```sh
+$ python3 filename
+$ File Name = 4.py
+$ python3 4.py
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/21.jpeg?raw=true)
+
+##### Flag - crypto{crypto{x0r_i5_ass0c1at1v3}
+
+&nbsp;
+
+### Favourite Byte
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/19.jpeg?raw=true)
+
+- First step is to decode from Hex.
+```sh
+$ bytes.fromhex(hex_string)  # Python ≥ 3
+--> b'\xde\xad\xbe\xef'
+$ bytearray.fromhex(hex_string)
+--> bytearray(b'\xde\xad\xbe\xef')
+
+--> It returns a bytearray and it reads hex strings with or without space separator.
+
+$ xor(ByteArray1, ByteArray2)
+--> It xors two Byte Array and returns the result.
+```
+
+- The Single-byte XOR cipher algorithm works with an encryption key of size 1 byte - which means the encryption key could be one of the possible 256 values of a byte.
+- We iterate through the encrypted message bytewise and XOR each byte with the encryption key - the resultant will be the original message.
+```sh
+$ from pwn import xor
+
+$ string = "73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d"
+$ a = bytes.fromhex(string)
+
+for i in range(256):
+    x = xor(i, a)
+    if "crypto" in str(x):
+    	print(x)
+```
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/23.jpeg?raw=true)
+
+```sh
+$ python3 filename
+$ File Name = 5.py
+$ python3 5.py
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/22.jpeg?raw=true)
+
+##### Flag - crypto{0x10_15_my_f4v0ur173_by7e}
+
+&nbsp;
+
+### You either know, XOR you don't
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/25.jpeg?raw=true)
+
+- First step is to decode from Hex.
+```sh
+$ bytes.fromhex(hex_string)  # Python ≥ 3
+--> b'\xde\xad\xbe\xef'
+$ bytearray.fromhex(hex_string)
+--> bytearray(b'\xde\xad\xbe\xef')
+
+--> It returns a bytearray and it reads hex strings with or without space separator.
+
+$ xor(ByteArray1, ByteArray2)
+--> It xors two Byte Array and returns the result.
+```
+
+```sh
+$ from pwn import xor
+$ data = bytes.fromhex("0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104")
+
+$ print(xor(data,"crypto{".encode())) #output - myXORke+y_Q\x0bOMe$~seG8bGURN\x04FWg)a|\x1dM!an\x7f
+$ print(xor(data, "myXORkey".encode()))
+```
+
+- The string encode() method returns encoded version of the given string. 
+- Since Python 3.0, strings are stored as Unicode, i.e. each character in the string is represented by a code point. 
+- So, each string is just a sequence of Unicode code points.
+
+```sh
+$ python3 filename
+$ File Name = 6.py
+$ python3 6.py
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/24.jpeg?raw=true)
+
+##### Flag - crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}
+
+&nbsp;
+
+
+# The Cryptopals Crypto Challenge Set 1
+&nbsp;
+
+| Challenge No | Challenge Name |
+| ------ | ------ |
+| **1** | Convert hex to base64 |
+| **2** | Fixed XOR |
+| **3** | Single-byte XOR cipher |
+| **4** | Detect single-character XOR |
+| **5** | Implement repeating-key XOR |
+| **6** | Break repeating-key XOR |
+| **7** | AES in ECB mode |
+| **8** | Detect AES in ECB mode |
+
+### Convert hex to base64
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/28.jpeg?raw=true)
+
+```sh
+--> Convert hex to base64 using Online Tool. 
+```
+
+- **Online Tool** --> https://base64.guru/converter/encode/hex
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/26.jpeg?raw=true)
+
+### Fixed XOR
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/27.jpeg?raw=true)
+
+- First step is to decode from Hex.
+```sh
+$ bytes.fromhex(hex_string)
+
+--> It returns a bytearray and it reads hex strings with or without space separator.
+
+$ xor(ByteArray1, ByteArray2)
+--> It xors two Byte Array and returns the result.
+```
+
+```sh
+$ from pwn import xor
+
+$ key1 = bytes.fromhex('1c0111001f010100061a024b53535009181c')
+$ key2 = bytes.fromhex('686974207468652062756c6c277320657965')
+
+$ flag = xor(key1, key2).hex()
+print(flag)
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/29.jpeg?raw=true)
+
+```sh
+$ python3 filename
+$ File Name = 7.py
+$ python3 7.py
+```
+
+### Single-byte XOR cipher
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/34.jpeg?raw=true)
+
+- First step is to decode from Hex.
+```sh
+$ bytes.fromhex(hex_string)
+
+--> It returns a bytearray and it reads hex strings with or without space separator.
+
+$ xor(ByteArray1, ByteArray2)
+--> It xors two Byte Array and returns the result.
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/31.jpeg?raw=true)
+
+```sh
+$ from pwn import xor
+
+$ string = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
+$ a = bytes.fromhex(string)
+
+$ for i in range(256):
+    x = xor(i, a)
+    print(x)
+```
+
+```sh
+$ python3 filename
+$ File Name = 8.py
+$ python3 8.py
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/33.jpeg?raw=true)
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/32.jpeg?raw=true)
+
+&nbsp;
+
+### Implement Repeating Key XOR
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/38.jpeg?raw=true)
+
+```sh
+# Hexlify is used here for converting bytes to hex
+from binascii import hexlify
+
+def repeating_key_xor(key, string):
+    # i is the position within the key
+    i = 0
+    arr = []
+    for ch in string:
+    	# Convert the key char and the plaintext char to
+        # integers using `ord`, XOR them and add them to
+        # the array.
+        arr.append(ord(ch) ^ ord(key[i]))
+        
+		# Manage the "repeating" part of the repeating key.
+        # If the end of the key is reached start back at the
+        # beginning.
+        i += 1
+        if (i == len(key)):
+            i = 0
+
+	# Finally convert our array to a byte array (which
+    # hexlify likes), then convert to hex and return it.
+    return hexlify(bytearray(arr))
+
+string = "Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal"
+key = 'ICE'
+
+encrypted = repeating_key_xor(key, string)
+print(encrypted)
+```
+
+```sh
+$ python3 filename
+$ File Name = 9.py
+$ python3 9.py
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/39.jpeg?raw=true)
+
+### AES in ECB mode
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/36.jpeg?raw=true)
+
+```sh
+
+--> Import base64 and other packages related to Crypto
+
+$ import base64
+$ from Crypto.Cipher import AES
+
+$ def decrypt_ecb_cipher(ciphertext, key): 
+	cipher = AES.new(key, AES.MODE_ECB) 
+	plaintext = cipher.decrypt(ciphertext) 
+	return plaintext
+
+$ def main():
+	key = b'YELLOW SUBMARINE'
+	
+--> We call base64.b64decode method to decode the base64_bytes into the ciphertext variable. 
+
+	with open('1.txt') as fh: 
+		ciphertext = base64.b64decode(fh.read()) 
+	message = decrypt_ecb_cipher(ciphertext, key) 
+	print (message)
+
+$ if _name_ == '_main_':
+	main()
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/37.jpeg?raw=true)
+
+```sh
+$ python3 filename
+$ File Name = 10.py
+$ python3 10.py
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/40.jpeg?raw=true)
