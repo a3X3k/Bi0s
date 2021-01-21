@@ -145,6 +145,14 @@ $ python3 3.py
 ##### Flag - crypto{3nc0d1n6_4ll_7h3_w4y_d0wn}
 &nbsp;
 
+| Challenge No | Challenge Name |
+| ------ | ------ |
+| **1** | XOR Starter |
+| **2** | XOR Properties |
+| **3** | Favourite Byte |
+| **4** | You either know, XOR you don't |
+| **5** | Lemur XOR |
+
 ### XOR Starter
 
 ![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/17.jpeg?raw=true)
@@ -355,3 +363,41 @@ $ python3 6.py
 ##### Flag - crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}
 
 &nbsp;
+
+### Lemur XOR
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/40.jpeg?raw=true)
+
+- Since two images are given we can have a wild guess that we have to XOR both the images.
+- For that we have a tool called Stegsolve.
+
+#### Installation
+```
+wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar
+
+chmod +x stegsolve.jar
+
+mkdir bin
+
+mv stegsolve.jar bin/
+```
+
+- Move the two images to the **bin** Folder.
+
+ ![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/41.jpeg?raw=true)
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/42.jpeg?raw=true)
+
+#### Usage
+
+- Stegsolve can be invoked by placing the image in the /bin folder and running stegsolve.
+
+```
+`$ java -jar stegsolve.jar`
+```
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/43.jpeg?raw=true)
+
+- The XOR the images by selecting **Analyze** option from **Toolbar**.
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/44.jpeg?raw=true)
+
