@@ -93,6 +93,60 @@ $ python3 8.py
 
 &nbsp;
 
+### Detect single-character XOR
+
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/45.jpeg?raw=true)
+
+- This is same as the **Previous Question**.
+-  First step is to decode from Hex.
+
+```sh
+$ bytes.fromhex(hex_string)
+
+--> It returns a bytearray and it reads hex strings with or without space separator.
+
+$ xor(ByteArray1, ByteArray2)
+--> It xors two Byte Array and returns the result.
+```
+
+```sh
+from pwn import xor
+
+filename = 'xor.txt'
+
+for line in open(filename, 'r'):
+    a = bytes.fromhex(line.strip())
+    
+    for i in range(256):
+        x = xor(i, a)
+        print(x)
+```
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/46.jpeg?raw=true)
+
+```sh
+$ python3 filename
+$ File Name = xor.py
+$ python3 xor.py
+```
+![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/47.jpeg?raw=true)
+
+- Here **Piping ( | )** is used to send the output to another destination.
+- We use **grep** which is a command line utility for searching plain-text data for lines which matching a regular expression.
+
+```sh
+$ grep -v string
+
+$ grep -v \x 
+
+\x --> Eliminates Hex Outputs
+```
+
+- **-v** displays the line only which does'nt match the string specified.
+- Thus we eliminate the hex output which are not necessary.
+- **Reference -->** https://www.tecmint.com/linux-grep-commands-character-classes-bracket-expressions/#:~:text=grep%20is%20a%20command%20line,the%20screen%20i.e.%20standard%20output.
+
+**Output :** b' Now that the party is jumping\n'
+
 ### Implement Repeating Key XOR
 
 ![Drag Racing](https://github.com/abhishekabi2002/Bi0s/blob/master/Cryptography/Assets/38.jpeg?raw=true)
