@@ -478,4 +478,172 @@ $ dd if=1.png of=2.png bs=1 skip=7821
 Flag --> inctfj{y0u_c4nt_s33_m3!!}
 ```
 
-### Reference --> https://wiki.bi0s.in/steganography/intro/
+### Snow Man
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/47.jpeg?raw=true)
+
+- Download the file and we can understand that it comes under **Whitespace Steganography**.
+- Stegsnow is a tool for concealing messages in text files by appending tabs and whitespaces at the end of lines.
+- The encoding used by snow relies on the fact that whitespaces and new lines won't be displayed in text editors.
+
+#### Installation
+
+```
+$ sudo apt install stegsnow
+```
+
+#### Decryption
+
+```
+$ stegsnow -C -p "<Password>" <Txt File>
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/48.jpeg?raw=true)
+
+- After decrypting we will get a flag which is **BASE-64** Encoded.
+- Using online tool we shall decrypt it.
+- **Online Tool --> https://www.dcode.fr/base-64-encoding**
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/49.jpeg?raw=true)
+
+```
+Flag --> inctfj{h4h4_st3gsn0w_i5_c00000001}
+```
+
+### The Office Trouble II
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/50.jpeg?raw=true)
+
+- In this challenge we need to crack the pdf password and find the **flag**
+- PDF Crack is a tool for recovering the pass for Encrypted PDF files. 
+- Encrypted files means the metadata of the file was encrypted with some characters.
+
+**It has some special features like:**
+
+- Checks with the system password and also the user provided password.
+- It can crack password by brute-forcing method only for character sets and only when we provide the maximum and minimum length of the password.
+- Searches the password from the wordlist.
+- Optimized search for owner-password when user-password is known.
+
+#### Installation
+
+```
+$ sudo apt-get install pdfcrack
+```
+
+#### Usage
+
+**Brute-forcing**
+
+```
+$ pdfcrack -f <file_name>
+```
+
+**Wordlist Cracking**
+
+```
+$ pdfcrack -f <file_name> -w <wordlist_file>
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/51.jpeg?raw=true)
+
+- After decryption we get a password and now we will be able to open the pdf.
+
+```
+Password --> fear420
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/52.jpeg?raw=true)
+
+### Traffic 13
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/53.jpeg?raw=true)
+
+- As given we have to analyze the network packages sent and received.
+- Wireshark is the most commonly used network protocol analyser and the de facto standard across many commercial and non-profit enterprises.
+- It shows the protocol of each packet captured and also the protocol hierarchy of the network whose pcap was made.
+- The hex buffer of each packet can be analysed separately and layer by layer.
+
+#### Installation
+
+```
+$ sudo apt install wireshark-qt
+```
+
+- Open **WireShark** and analyze the **TCP** packages.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/54.jpeg?raw=true)
+
+- After analyzing various **TCP** packages we shall find the **flag**.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/55.jpeg?raw=true)
+
+- But the flag is encryted.
+
+```
+Encrypted Flag --> vapgsw{o3j4er_0s_plO3E_GUe3ng5}
+```
+
+- So we have to decrypt it using the online Tool. 
+- **Online Tool --> https://www.dcode.fr/caesar-cipher**
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/56.jpeg?raw=true)
+
+```
+Flag --> inctfj{b3w4re_0f_cyB3R_THr3at5}
+```
+
+### Crack FDP
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/57.jpeg?raw=true)
+
+- Download the **PDF**. 
+- In this challenge we need to crack the pdf password and find the **flag**
+- PDF Crack is a tool for recovering the pass for Encrypted PDF files. 
+- Encrypted files means the metadata of the file was encrypted with some characters.
+
+**It has some special features like:**
+
+- Checks with the system password and also the user provided password.
+- It can crack password by brute-forcing method only for character sets and only when we provide the maximum and minimum length of the password.
+- Searches the password from the wordlist.
+- Optimized search for owner-password when user-password is known.
+
+#### Installation
+
+```
+$ sudo apt-get install pdfcrack
+```
+
+#### Usage
+
+**Brute-forcing**
+
+```
+$ pdfcrack -f <file_name>
+```
+
+**Wordlist Cracking**
+
+```
+$ pdfcrack -f <file_name> -w <wordlist_file>
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/58.jpeg?raw=true)
+
+```
+Password --> diosayudameenelesut
+```
+
+- After decryption we get a password and now we will be able to open the pdf.
+- We can see the **flag** inside the file.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/59.jpeg?raw=true)
+
+```
+Flag --> flag{1ae06a29a7abd6c07dba8976698f756b987f734d}
+```
+
+#### Reference 1 --> https://wiki.bi0s.in/steganography/intro/
+
+#### Reference 2 --> https://wiki.bi0s.in/forensics/roadmap/
