@@ -1,3 +1,87 @@
+# Set 2 Forensics Challenges
+
+
+- Initially the file will be encrypted.
+- Use frcrack Zip to crack the Password.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/91.jpeg?raw=true)
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/92.jpeg?raw=true)
+
+
+### B Challenge
+
+#### Installation
+
+```
+$ sudo apt install binwalk
+```
+
+
+#### Usage
+
+```
+$ binwalk -e <file-name>
+$ binwalk -e 1.jpg
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/93.jpeg?raw=true)
+
+- Here in the above image, we see that there is a jpeg image and a ZIP in it and we see that, it is embedded within the jpeg image file.
+- To extract it we can make use of a carving tool dd.
+- It can carve out data from specific offsets that are passed as arguments to the tool along the with the file that needs to be read.
+
+```
+$ dd if=<filename> of=<filename> bs=1 skip=<offset>
+```
+
+- if = the file from which data has to be extracted is passed as an argument.
+- of = has the name of the file that we give after extraction.
+- skip = is the offset of the file that has to be read.
+- bs = i the byte skip argument that specifies the frequency of reading data from the given file.
+
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/94.jpeg?raw=true)
+
+- If we try to extract all files we will get a Zip File.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/95.jpeg?raw=true)
+
+- Now we get the flag inside the Image.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/96.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/97.jpeg?raw=true)
+
+
+### E Challenge
+
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/98.jpeg?raw=true)
+
+- Here when we analyze using bin walk we cant find anything. 
+- So Next option is to look into the Hex Dump.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/99.jpeg?raw=true)
+
+- Online Tool --> https://hexed.it/
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/100.jpeg?raw=true)
+
+- Here at last we shall see that there are some Hex Encrypted line.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/101.jpeg?raw=true)
+
+- We have to decode it to get the ASCII Text.
+
+```
+696e6374667b337831663730304c5f69735f673030645f215f67756573735f2121217d
+```
+
+- Online Tool --> https://www.convertstring.com/EncodeDecode/HexDecode
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/102.jpeg?raw=true)
+
+
 # Traboda Forensics Challenges
 
 ### Snow Snow
