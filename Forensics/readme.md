@@ -33,32 +33,34 @@ $ binwalk -e 1.jpg
 $ dd if=<filename> of=<filename> bs=1 skip=<offset>
 ```
 
-- if = the file from which data has to be extracted is passed as an argument.
-- of = has the name of the file that we give after extraction.
-- skip = is the offset of the file that has to be read.
-- bs = i the byte skip argument that specifies the frequency of reading data from the given file.
+- `if = the file from which data has to be extracted is passed as an argument.`
+- `of = has the name of the file that we give after extraction.`
+- `skip = is the offset of the file that has to be read.`
+- `bs = i the byte skip argument that specifies the frequency of reading data from the given file.`
 
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/94.jpeg?raw=true)
 
-- If we try to extract all files we will get a Zip File.
+- If we try to extract all files we will get a `Zip File`.
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/95.jpeg?raw=true)
 
-- Now we get the flag inside the Image.
+- Now we get the `flag` inside the Image.
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/96.jpeg?raw=true)
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/97.jpeg?raw=true)
 
+```
+Flag --> inctf{fr33dom_w4s_n0t_w0n_0v3rnit3}
+```
 
 ### E Challenge
 
-
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/98.jpeg?raw=true)
 
-- Here when we analyze using bin walk we cant find anything. 
-- So Next option is to look into the Hex Dump.
+- Here when we analyze using `bin walk` we cant find anything. 
+- So Next option is to look into the `Hex Dump`.
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/99.jpeg?raw=true)
 
@@ -66,11 +68,11 @@ $ dd if=<filename> of=<filename> bs=1 skip=<offset>
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/100.jpeg?raw=true)
 
-- Here at last we shall see that there are some Hex Encrypted line.
+- Here at last we shall see that there are some `Hex Encrypted Text`.
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/101.jpeg?raw=true)
 
-- We have to decode it to get the ASCII Text.
+- We have to decode it to get the `ASCII` Text.
 
 ```
 696e6374667b337831663730304c5f69735f673030645f215f67756573735f2121217d
@@ -79,6 +81,220 @@ $ dd if=<filename> of=<filename> bs=1 skip=<offset>
 - Online Tool --> https://www.convertstring.com/EncodeDecode/HexDecode
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/102.jpeg?raw=true)
+
+```
+Flag --> inctf{3x1f700L_is_g00d_!_guess!!!}
+```
+
+### S Challenge
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/103.jpeg?raw=true)
+
+- When we analyze using `bin walk` we cant find anything. 
+- So Next option is to look into the `Hex Dump`.
+- Online Tool --> https://hexed.it/
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/104.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/100.jpeg?raw=true)
+
+- Here at last we shall see that there are some `Base 64 Encrypted` text.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/105.jpeg?raw=true)
+
+- We have to decode it to get the `ASCII Text`.
+
+```
+aW5jdGZ7c3RyaW5nc19hcmVfdXNlZnVsfQ==
+```
+
+- Online Tool --> https://www.base64decode.org/
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/106.jpeg?raw=true)
+
+```
+Flag --> inctf{strings_are_useful}
+```
+
+### S_H Challenge
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/107.jpeg?raw=true)
+
+- When we analyze using `bin walk` we cant find anything. 
+- So Next option is to look into the `Hex Dump`.
+- Online Tool --> https://hexed.it/
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/108.jpeg?raw=true)
+
+- Here at last we shall see that there are some Hex Encrypted Text.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/109.jpeg?raw=true)
+
+- We have to decode it to get the ASCII Text.
+
+```
+526d7868636d564a626c526f5a5568766247554b
+```
+
+- Online Tool --> https://www.rapidtables.com/convert/number/hex-to-ascii.html
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/110.jpeg?raw=true)
+
+- We shall see that there are some Base 64 Encrypted text.
+- We have to decode it to get the ASCII Text.
+
+```
+RmxhcmVJblRoZUhvbGUK
+```
+
+- Online Tool --> https://www.base64decode.org/
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/111.jpeg?raw=true)
+
+```
+FlareInTheHole
+```
+
+- We shall understand that this is an Password for the file.
+- Now if we try to extract with **StegHide** we shall extract the hidden file.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/112.jpeg?raw=true)
+
+[Click me to view the File](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/flag.txt)
+
+```
+Flag --> inctf{1_l0ve_c0unt3r_str1ke_1.6}
+```
+
+### Z Challenge
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/114.jpeg?raw=true)
+
+- We can see that there is an `QR Code`.
+- We shall get the `flag` if we decode it.
+- Zbarimg is a tool used to scan and decode QR codes from image files
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/113.jpeg?raw=true)
+
+#### Installation
+
+```
+$ sudo apt-get install zbar-tools
+```
+
+#### Usage
+
+```
+$ zbarimg <file-name>
+```
+
+```
+Flag --> flag{N0w_y0u_a_little_about_zbarimg}
+```
+
+### SS Challenge
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/115.jpeg?raw=true)
+
+- In this challenge we shall use the `StegSolve Tool` to decode the `Hidden text`.
+- `Stegsolve` is used to `analyze images` in `different planes` by taking off `bits` of the image.
+
+#### Installation
+
+```
+$ wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar
+$ chmod +x stegsolve.jar
+$ mkdir bin
+$ mv stegsolve.jar bin/
+```
+
+#### Usage
+
+- `Stegsolve` can be invoked by placing the image in the `/bin` folder and running stegsolve.
+
+```
+$ java -jar stegsolve.jar
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/116.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/117.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/118.jpeg?raw=true)
+
+```
+Flag --> pctf{st3gs0lv3_1s_u53ful}
+```
+
+### FS Challenge
+
+- The given `PNG` shows error since its `hex dumps` are in wrong format.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/119.jpeg?raw=true)
+
+- So we have to edit the `Hex Chunks`.
+- Online Tool --> https://hexed.it/
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/120.jpeg?raw=true)
+
+ - We have to edit the header and add extra `00` Bytes in that.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/121.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/122.jpeg?raw=true)
+
+- Finally we get the `Flag`.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/123.jpeg?raw=true)
+
+```
+Flag --> inctfj{4Ye@aRr4mbB4_u_g0T_m3!}
+```
+
+### Pattern Printing 1
+
+[Pattern Printing 1](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/Pattern_1.sh)
+
+```
+#!/bin/bash
+
+for(( i = 5 ; i > 0 ; i--))
+do
+	for(( j = 0 ; j < $i ; j++))
+	do
+		echo -n "*"
+	done
+	echo ""
+	
+done
+```
+
+### Pattern Printing 2
+
+[Pattern Printing 2](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/Pattern_2.sh)
+
+```
+#!/bin/bash
+
+space=4
+star=1
+for(( i = 1 ; i <= 5 ; i++))
+do
+	for((j=0;j<space;j++))
+	do
+		echo -n " "
+	done
+	
+	space=$(( space-1 ))
+	
+	for((j=0;j<$star;j++))
+	do
+		echo -n "*"
+	done
+	star=$(( star+2 ))
+	echo ""
+done
+```
 
 
 # Traboda Forensics Challenges
