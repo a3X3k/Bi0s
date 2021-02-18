@@ -4,12 +4,9 @@
 - Initially the file will be encrypted.
 - Use frcrack Zip to crack the Password.
 
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/91.jpeg?raw=true)
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/92.jpeg?raw=true)
 
 <div align="center">
     <a href="https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/91.jpeg?raw=true" width="720" alt="google"></a>
-    
 </div>
 
 ### B Challenge
