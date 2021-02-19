@@ -235,7 +235,7 @@ Flag --> pctf{st3gs0lv3_1s_u53ful}
 - So we have to edit the `Hex Chunks`.
 - Online Tool --> https://hexed.it/
 
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/120.jpeg?raw=true)
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/d0e0757f2c0bfa48732ccf712da95ad9a948a2f0/Forensics/Assets/120.jpeg?raw=true)
 
  - We have to edit the header and add extra `00` Bytes in that.
 
