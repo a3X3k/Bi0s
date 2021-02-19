@@ -296,6 +296,31 @@ do
 done
 ```
 
+### Revers Me
+
+- Using the `Python Script` we can `reverse` the contents of the file.
+
+```
+filename = 'revers.me'
+f = open("1.txt", "w")
+
+with open(filename, 'rb') as fopen:
+    line = fopen.read()
+    line1 = line[::-1] 
+    f.writelines(line1) 
+
+f.close()
+```
+
+- Then we can `print` all `printable characters` from the File using `strings` command and `filter` the output using `grep`.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/124.jpeg?raw=true)
+
+```
+Flag --> inctf{Y0u_ar3_g00d_4t_rev3rs1ng_1_gu3ss}
+```
+
+
 
 # Traboda Forensics Challenges
 
