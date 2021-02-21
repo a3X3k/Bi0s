@@ -1,5 +1,8 @@
 #!/bin/sh
 
+xxd Twin1 > Twin1.hex
+xxd Twin2 > Twin2.hex
+
 xxd Twin1 | grep 0023b990
 xxd Twin2 | grep 0023b990
 
