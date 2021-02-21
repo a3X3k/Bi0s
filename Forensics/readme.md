@@ -9,6 +9,8 @@
 
 ### B Challenge
 
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/97.jpeg?raw=true)
+
 #### Installation
 
 ```
@@ -48,8 +50,6 @@ $ dd if=<filename> of=<filename> bs=1 skip=<offset>
 - Now we get the `flag` inside the Image.
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/96.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/97.jpeg?raw=true)
 
 ```
 Flag --> inctf{fr33dom_w4s_n0t_w0n_0v3rnit3}
