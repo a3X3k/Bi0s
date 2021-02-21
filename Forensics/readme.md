@@ -269,6 +269,9 @@ do
 done
 ```
 
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/128.jpeg?raw=true)
+
+
 ### Pattern Printing 2
 
 [Pattern Printing 2](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/Pattern_2.sh)
@@ -296,6 +299,8 @@ do
 done
 ```
 
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/129.jpeg?raw=true)
+
 ### Revers Me
 
 - Using the `Python Script` we can `reverse` the contents of the file.
@@ -315,6 +320,8 @@ f.close()
 - Then we can `print` all `printable characters` from the File using `strings` command and `filter` the output using `grep`.
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/124.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/127.jpeg?raw=true)
 
 ```
 Flag --> inctf{Y0u_ar3_g00d_4t_rev3rs1ng_1_gu3ss}
