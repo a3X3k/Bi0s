@@ -323,10 +323,274 @@ f.close()
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/127.jpeg?raw=true)
 
+[Python File](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/1.py)
+
+[Revers File](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/revers.me)
+
+[Text File](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/1.txt)
+
+[Bash Script File](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/1.sh)
+
 ```
 Flag --> inctf{Y0u_ar3_g00d_4t_rev3rs1ng_1_gu3ss}
 ```
 
+### Stranger Things
+
+- `Download` the `Challenge` File.
+- We shall `Extract` the `text` from the `file` using `strings` command.
+
+```
+Obviously, this is not the flag, but I can give you the flag format.
+inctf{s0m3_l33t_str1ng}
+PS: "inctf" in the flag is also case insensitive. Find three flags in the file.
+```
+
+- First try with `case sensitive` command.
+
+```
+strings find-flags-in-me | grep 'inctf'
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/130.jpeg?raw=true)
+
+ - Now try with `case insensitive` command.
+
+```
+strings find-flags-in-me | grep -i 'inctf'
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/131.jpeg?raw=true)
+
+- Now we have `Extracted` `Two` `Flags`.
+- One more flag is there to be Extracted.
+- Now lets try some random `Error and Trial Method` kind of thing.
+
+```
+#!/bin/sh
+strings find-flags-in-me | grep -i 'i'
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/132.jpeg?raw=true)
+
+- Lets `Replace` the `dots` with `Empty Space`.
+
+```
+tr "Character to be Replaced" "Replacement Character"
+
+$ tr '.' ' '
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/133.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/134.jpeg?raw=true)
+
+- We shall see that there are Empty Spaces.
+- So next lets try to `Remove` the `White Space`.
+- [Reference](https://www.toolbox.com/tech/programming/question/sed-command-to-replace-whitespace-with-comma-032411/#:~:text=Simple%20SED%20commands%20are%3A,space%20with%20a%20single%20comma.)
+
+```
+sed 's/ //g'
+
+$ tr '.' ' '
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/135.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/136.jpeg?raw=true)
+
+- Now lets try to `grep` for `flag` format.
+- When we try with different `inctf` combinations we shall get some outputs.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/138.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/137.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/139.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/140.jpeg?raw=true)
+
+- After trying some `combinations` we shall find that the flag is `scattered` in `different places`. 
+
+```
+#!/bin/sh
+
+strings find-flags-in-me | grep -i 'ctf'
+
+# s/ //g means to remove the whitespace
+xxd find-flags-in-me | tr '.' ' ' | sed 's/ //g' | grep -i 'inc'
+
+# grep -i is for case insensitive
+xxd find-flags-in-me | tr '.' ' ' | sed 's/ //g' | grep -i 't'
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/142.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/141.jpeg?raw=true)
+
+[Reference](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/2.sh)
+
+```
+Flags :
+
+inctf{y4yy!!!_found_th3_fir5t_fl4g}
+InCtF{G00d_jobb!!This_is_the_2nd_on3}
+inctf{th1s_1s_th3_l4st_0ne}
+```
+
+### Twins Challenge
+
+- `Download` the `Challenge` Files.
+
+```
+I Hope These files are as same as twins. But find it yourself.
+```
+
+- Initially tried to `Analyze` through `various Tools` and found out that there are some differences in some `Byte` `positions`.
+- [Reference](https://superuser.com/questions/125376/how-do-i-compare-binary-files-in-linux)
+- Finally ended with the `vimdiff` command.
+
+```
+--> Converting to Hex
+
+$ xxd Twin1 > Twin1.hex
+$ xxd Twin2 > Twin2.hex
+```
+
+```
+--> Then Analyze using Vimdiff
+
+$ vimdiff Twin1.hex Twin2.hex
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/143.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/144.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/145.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/146.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/147.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/148.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/149.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/150.jpeg?raw=true)
+
+- We shall see the `Comparisons` at each `Bytes`.
+- Now lets Analyse the differences at `Each Byte` seperately using `xxd` and `grep` commands alike the previous challenge.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/151.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/152.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/153.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/154.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/155.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/156.jpeg?raw=true)
+
+```
+#!/bin/sh
+
+xxd Twin1 > Twin1.hex
+xxd Twin2 > Twin2.hex
+
+xxd Twin1 | grep 0023b990
+xxd Twin2 | grep 0023b990
+
+echo ""
+
+xxd Twin1 | grep 0023be20
+xxd Twin2 | grep 0023be20
+
+echo ""
+
+xxd Twin1 | grep 0023c200
+xxd Twin2 | grep 0023c200
+
+echo ""
+
+xxd Twin1 | grep 0023c640
+xxd Twin2 | grep 0023c640
+
+echo ""
+
+xxd Twin1 | grep 0023c960
+xxd Twin2 | grep 0023c960
+
+echo ""
+
+xxd Twin1 | grep 0023ce50
+xxd Twin2 | grep 0023ce50
+
+echo ""
+
+xxd Twin1 | grep 0023d3c0
+xxd Twin2 | grep 0023d3c0
+
+echo ""
+
+xxd Twin1 | grep 0023d830
+xxd Twin2 | grep 0023d830
+
+echo ""
+
+xxd Twin1 | grep 0023dca0
+xxd Twin2 | grep 0023dca0
+
+echo ""
+
+xxd Twin1 | grep 0023dfd0
+xxd Twin2 | grep 0023dfd0
+
+echo ""
+
+xxd Twin1 | grep 0023e620
+xxd Twin2 | grep 0023e620
+
+echo ""
+
+xxd Twin1 | grep 0023eab0
+xxd Twin2 | grep 0023eab0
+
+echo ""
+
+xxd Twin1 | grep 0023f190
+xxd Twin2 | grep 0023f190
+
+echo ""
+
+xxd Twin1 | grep 0023f6d0
+xxd Twin2 | grep 0023f6d0
+
+echo ""
+
+xxd Twin1 | grep 0023fb90
+xxd Twin2 | grep 0023fb90
+
+echo ""
+
+xxd Twin1 | grep 00240020
+xxd Twin2 | grep 00240020
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/157.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/158.jpeg?raw=true)
+
+- Here we shall see that at `Each Byte position` `One` `letter` `Differs`.
+- Now if we try to `Concatenate` all the characters at `Different` `Positions` then we shall get the `Final` `String`.
+
+[Bash Script File](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/3.sh)
+
+```
+Flag --> inctf{y0u_Gotm3}
+```
 
 
 # Traboda Forensics Challenges
