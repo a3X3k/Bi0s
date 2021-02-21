@@ -428,7 +428,7 @@ xxd find-flags-in-me | tr '.' ' ' | sed 's/ //g' | grep -i 't'
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/141.jpeg?raw=true)
 
-[Reference](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/2.sh)
+[Bash Script](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/2.sh)
 
 ```
 Flags :
