@@ -451,50 +451,6 @@ I Hope These files are as same as twins. But find it yourself.
 - Finally ended with the `vimdiff` command.
 
 ```
---> Converting to Hex
-
-$ xxd Twin1 > Twin1.hex
-$ xxd Twin2 > Twin2.hex
-```
-
-```
---> Then Analyze using Vimdiff
-
-$ vimdiff Twin1.hex Twin2.hex
-```
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/143.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/144.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/145.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/146.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/147.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/148.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/149.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/150.jpeg?raw=true)
-
-- We shall see the `Comparisons` at each `Bytes`.
-- Now lets Analyse the differences at `Each Byte` seperately using `xxd` and `grep` commands alike the previous challenge.
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/151.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/152.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/153.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/154.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/155.jpeg?raw=true)
-
-![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/156.jpeg?raw=true)
-
-```
 #!/bin/sh
 
 xxd Twin1 > Twin1.hex
