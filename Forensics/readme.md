@@ -446,15 +446,50 @@ inctf{th1s_1s_th3_l4st_0ne}
 I Hope These files are as same as twins. But find it yourself.
 ```
 
-- Initially tried to `Analyze` through `various Tools` and found out that there are some differences in some `Byte` `positions`.
+- Initially tried to `Analyze` through `various Tools` and found out that there are some differences in some `Byte``positions`.
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/159.jpeg?raw=true)
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/161.jpeg?raw=true)
 
-- Then `finally` ended up with the `Bash` Command.
+- Then `finally` ended up with the `Bash` Script.
 
-[Bash Script](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/4.sh)
+```
+#!/bin/sh
+
+f1=Twin1
+f2=Twin2
+
+size=$(stat -c%s $f1)
+i=0
+while [ $i -lt $size ]; do
+  if ! r="`cmp -n 1024 -i $i -b $f1 $f2`"; then
+    printf "%8x: %s\n" $i "$r"
+  fi
+  i=$(expr $i + 1024)
+done
+```
+
+[Reference](https://stackoverflow.com/questions/12118403/how-to-compare-binary-files-to-check-if-they-are-the-same)
+
+- This `output's` the `lines` with the `different` `bytes`. 
+- But the `output` contains `offset` and other `informations` too.
+- For my convenience I am `formatting` it to get the `proper flag`.
+- We shall use the sed to remove the spaces between the `bytes` to properly get our `flag`.
+- `sed 's/ //g'` does the `job`.
+
+```
+sed 's/ //g'
+```
+
+- After `Removing` the `white spaces` lets only `Display` the `Character` at the `Position` where the `Characters` are `Different`.
+- `sed -e 's/\(^.*\)\(.$\)/\2/'`  `displays` only the `Last Character` of the `Line`.
+
+```
+sed -e 's/\(^.*\)\(.$\)/\2/'
+```
+
+- After making `several formats` in the `Bash Output` we get the `Flag` as expected.
 
 ```
 #!/bin/sh
@@ -477,9 +512,13 @@ done
 echo ""
 ```
 
+[Bash Script](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/4.sh)
+
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/160.jpeg?raw=true)
 
-- One of the other way using `GUI` is with the `vimdiff` command.
+`                                                                                   `
+
+- One of the other way of finding the difference by `GUI` is with the `vimdiff` tool.
 - [Reference](https://superuser.com/questions/125376/how-do-i-compare-binary-files-in-linux)
 
 
@@ -490,9 +529,9 @@ $ xxd Twin1 > Twin1.hex
 $ xxd Twin2 > Twin2.hex
 ```
 
-```
---> Then Analyze using Vimdiff
+- Then Analyze using Vimdiff
 
+```
 $ vimdiff Twin1.hex Twin2.hex
 ```
 
