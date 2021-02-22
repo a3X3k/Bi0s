@@ -452,7 +452,7 @@ I Hope These files are as same as twins. But find it yourself.
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/161.jpeg?raw=true)
 
-- Then `finaly` ended up with the `Bash` Command.
+- Then `finally` ended up with the `Bash` Command.
 
 [Bash Script](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/4.sh)
 
