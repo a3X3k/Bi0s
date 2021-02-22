@@ -623,7 +623,7 @@ xxd Twin2 | grep 00240020
 [Bash Script File](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/3.sh)
 
 ```
-Flag --> inctf{y0u_Gotm3}
+Flag --> inctf{y0uGotm3}
 ```
 
 
