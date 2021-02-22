@@ -516,8 +516,6 @@ echo ""
 
 ![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/160.jpeg?raw=true)
 
-`                                                                                   `
-
 - One of the other way of finding the difference by `GUI` is with the `vimdiff` tool.
 - [Reference](https://superuser.com/questions/125376/how-do-i-compare-binary-files-in-linux)
 
