@@ -447,8 +447,86 @@ I Hope These files are as same as twins. But find it yourself.
 ```
 
 - Initially tried to `Analyze` through `various Tools` and found out that there are some differences in some `Byte` `positions`.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/159.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/161.jpeg?raw=true)
+
+- Then `finaly` ended up with the `Bash` Command.
+
+[Bash Script](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/4.sh)
+
+```
+#!/bin/sh
+
+f1=Twin1
+f2=Twin2
+
+size=$(stat -c%s $f1)
+i=0
+
+echo -n "The Flag is : "
+
+while [ $i -lt $size ]; do
+  if ! r="`cmp -n 1024 -i $i -b $f1 $f2`"; then
+    printf "%8x: %s\n" $i "$r" | sed 's/ //g' | sed -e 's/\(^.*\)\(.$\)/\2/' | tr '\n' ' ' | sed 's/ //g'
+  fi
+  i=$(expr $i + 1024)
+done
+
+echo ""
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/160.jpeg?raw=true)
+
+- One of the other way using `GUI` is with the `vimdiff` command.
 - [Reference](https://superuser.com/questions/125376/how-do-i-compare-binary-files-in-linux)
-- Finally ended with the `vimdiff` command.
+
+
+```
+--> Converting to Hex
+
+$ xxd Twin1 > Twin1.hex
+$ xxd Twin2 > Twin2.hex
+```
+
+```
+--> Then Analyze using Vimdiff
+
+$ vimdiff Twin1.hex Twin2.hex
+```
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/143.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/144.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/145.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/146.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/147.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/148.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/149.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/150.jpeg?raw=true)
+
+- We shall see the `Comparisons` at each `Bytes`.
+- Now lets Analyse the differences at `Each Byte` seperately using `xxd` and `grep` commands alike the previous challenge.
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/151.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/152.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/153.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/154.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/155.jpeg?raw=true)
+
+![Bi0s](https://github.com/abhishekabi2002/Bi0s/blob/master/Forensics/Assets/156.jpeg?raw=true)
+
 
 ```
 #!/bin/sh
