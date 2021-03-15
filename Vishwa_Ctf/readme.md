@@ -119,7 +119,7 @@ Flag --> vishwaCTF{thursday_january_10_08_24_36_2013}
 
 ### Recovery
 
-![](https://github.com/abhishekabi2002/Bi0s/blob/master/Vishwa_Ctf/Assets/.png?raw=true)
+![](https://github.com/abhishekabi2002/Bi0s/blob/master/Vishwa_Ctf/Assets/17.png?raw=true)
 
 - `Download` the `files` given.
 - Using `registry viewer` `analyse` the file2.
@@ -140,3 +140,10 @@ samdump2 file1 file2 > hashes.txt
 
 ![](https://github.com/abhishekabi2002/Bi0s/blob/master/Vishwa_Ctf/Assets/23.png?raw=true)
 
+```
+john --wordlist=shreyas.txt --format=NT hashes.txt
+```
+
+```sh
+Flag --> vishwaCTF{sayerhs_093}
+```
