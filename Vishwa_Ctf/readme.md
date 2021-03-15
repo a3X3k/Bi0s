@@ -138,12 +138,19 @@ Flag --> vishwaCTF{thursday_january_10_08_24_36_2013}
 samdump2 file1 file2 > hashes.txt
 ```
 
+![](https://github.com/abhishekabi2002/Bi0s/blob/master/Vishwa_Ctf/Assets/23.png?raw=true)
+
+- Created a wordlist using python script `cupp.py` with hints given in description 
+
+`The DOB is 10 January 1993 because at the time he changed the password he is 20 yrs old.`
+
+- Using this `python script` if we input the `name,DOB` etc we shall get all possible combinations of `password`.
+
 ```
 john --wordlist=shreyas.txt --format=NT hashes.txt
 ```
 
-- Created a wordlist using python script `cupp.py` with hints given in description `The DOB is 10 January 1993 because at the time he changed the password he is 20 yrs old.`
-- Using this `python script` if we input the `name,DOB` etc we shall get all possible combinations of `password`.
+- Password = `sayerhs_093`
 
 ```sh
 Flag --> vishwaCTF{sayerhs_093}
