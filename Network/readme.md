@@ -1,3 +1,5 @@
+# Network Challenges
+
 ## Beginner : 
 
 ### HTTP : 
@@ -65,10 +67,10 @@ with open("final.zip", "wb") as g: # Write to the File
 
 - After `compliling` and `running` the `script` we shall get the `ZIP` file.
 
-[PCAP File](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/bizz.pcap)
-[Script](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/1.py)
-[Zip File](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/final.zip)
-[PNG File](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/flag.png)
+[PCAP File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/bizz.pcap)
+[Script -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/1.py)
+[Zip File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/final.zip)
+[PNG File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/flag.png)
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/Network/Assets/9.jpeg?raw=true)
 
@@ -119,10 +121,10 @@ with open("final.zip", "w") as g: # Write to the File
 Password --> craccer
 ```
 
-[PCAP File](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/1.pcap)
-[Script](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/1.py)
-[Zip File](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/final.zip)
-[JPG File](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/flag.jpg)
+[PCAP File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/1.pcap)
+[Script -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/1.py)
+[Zip File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/final.zip)
+[JPG File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/flag.jpg)
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/flag.jpg?raw=true)
 
@@ -169,8 +171,8 @@ with open("final.gif", "w") as g:
 
 - After `compliling` and `running` the `script` we shall get the `GIF` file.
 
-[PCAP File](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/data.pcap)
-[Script](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/1.py)
-[GIF File](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/final.gif)
+[PCAP File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/data.pcap)
+[Script -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/1.py)
+[GIF File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/final.gif)
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/final.gif?raw=true)
