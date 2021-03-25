@@ -70,7 +70,7 @@ with open("final.zip", "wb") as g: # Write to the File
 [PCAP File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/bizz.pcap)
 [Script -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/1.py)
 [Zip File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/final.zip)
-[PNG File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/flag.png)
+[PNG File](https://github.com/a3X3k/Bi0s/blob/master/Network/Biz44re/flag.png)
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/Network/Assets/9.jpeg?raw=true)
 
@@ -124,7 +124,7 @@ Password --> craccer
 [PCAP File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/1.pcap)
 [Script -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/1.py)
 [Zip File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/final.zip)
-[JPG File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/flag.jpg)
+[JPG File](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/flag.jpg)
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/Network/Its%20Complicated/flag.jpg?raw=true)
 
@@ -173,6 +173,6 @@ with open("final.gif", "w") as g:
 
 [PCAP File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/data.pcap)
 [Script -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/1.py)
-[GIF File -- ](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/final.gif)
+[GIF File](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/final.gif)
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/Network/Orcish/final.gif?raw=true)
