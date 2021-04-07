@@ -1,4 +1,4 @@
-## Fresh From the Oven
+### Fresh From the Oven
 
 - After opening the `PCAP` file start analysing each packets.
 - In one of the `TCP` packets you can find the `Message` which is being transmitted.
@@ -178,6 +178,13 @@ zzsteg -E b1,bgr,lsb,xy flag.png | strings | grep -i inctf # Case insensitive
 ![bi0s](https://github.com/a3X3k/Bi0s/blob/master/Forensics/Scapy/Assets/21.png?raw=true)
 
 - Finally we got our flag!!
+
+[PCAP -- ](https://github.com/a3X3k/Bi0s/blob/master/Forensics/Scapy/Assets/1.pcap)
+[ZIP -- ](https://github.com/a3X3k/Bi0s/blob/master/Forensics/Scapy/Assets/1.zip)
+[PNG -- ](https://github.com/a3X3k/Bi0s/blob/master/Forensics/Scapy/Assets/flag.png)
+[PDF -- ](https://github.com/a3X3k/Bi0s/blob/master/Forensics/Scapy/Assets/1.pdf)
+[Scapy 1 -- ](https://github.com/a3X3k/Bi0s/blob/master/Forensics/Scapy/Assets/1.py)
+[Scapy 2 -- ](https://github.com/a3X3k/Bi0s/blob/master/Forensics/Scapy/Assets/2.py)
 
 ```
 Flag --> inctf{3ach_4nd_3v3ry_s3cre7_inf0rm4t10n_w1ll_b3_kn0wn_by_wir3shark!!!!!_:)}
