@@ -1,6 +1,6 @@
-## Forensics
+# Forensics
 
-### 1597
+## 1597
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/CTFs/RITSEC21/Assets/1.jpeg?raw=true)
 
@@ -15,7 +15,7 @@
 Flag --> RS{git_is_just_a_tre3_with_lots_of_branches}
 ```
 
-### Blob
+## Blob
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/CTFs/RITSEC21/Assets/5.png?raw=true)
 
@@ -46,7 +46,7 @@ Flag --> RS{refs_can_b3_secret_too}
 
 ## Inception CTF
 
-### Dream 1
+#### Dream 1
 
 - Extract the Zip.
 - `InceptionCTF` contains `Reality.7z` .
@@ -117,7 +117,7 @@ Flag --> RITSEC{DIVERSION}
 Flag --> RITSEC{528491}
 ```
 
-### Birdthief : FYSA
+## Birdthief : FYSA
 
 ![Bi0s](https://github.com/a3X3k/Bi0s/blob/master/CTFs/RITSEC21/Assets/6.png?raw=true)
 
@@ -136,7 +136,7 @@ Flag --> RITSEC{528491}
 Flag --> RS{Make_sure_t0_read_the_briefing}
 ```
 
-### Parcel
+## Parcel
 
 ![bi0s](https://github.com/a3X3k/Bi0s/blob/master/CTFs/RITSEC21/Assets/8.png?raw=true)
 
