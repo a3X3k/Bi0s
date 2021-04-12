@@ -1,3 +1,5 @@
+<p align="center">
+ 
 # RITSEC19
 
 | Challenge | Category  | Link  |
@@ -8,3 +10,5 @@
 | Bird Thief FYSA | Forensics | [Click Me!!](https://github.com/a3X3k/Bi0s/tree/master/CTFs/RITSEC21/Forensics/Bird%20Thief%20FYSA) |
 | Parcel | Forensics | [Click Me!!](https://github.com/a3X3k/Bi0s/tree/master/CTFs/RITSEC21/Forensics/Parcel) |
 | #OSINT | INTEL | [Click Me!!](https://github.com/a3X3k/Bi0s/tree/master/CTFs/RITSEC21/INTEL/%23OSINT) |
+
+</p>
