@@ -1,6 +1,8 @@
 | Challenge | Category  | Link  |
 | :-----: | :-: | :-: |
-| INCEPTION CTF DREAM 1 |  | |
-  | |
-| INCEPTION CTF DREAM 3 |  | |
-| INCEPTION CTF DREAM 4 |  | |
+| 1587 | Forensics | |
+| Blob | Forensics | |
+| Inception CTF | Forensics | |
+| Bird Theif FYSA | Forensics | |
+| Parcel | Forensics | |
+| #OSINT | INTEL | |
