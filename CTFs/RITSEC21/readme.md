@@ -1,6 +1,6 @@
 <div align="center">
   
-# RITSEC19
+# RITSEC21
 
 | Challenge | Category  | Link  |
 | :-----: | :-: | :-: |
