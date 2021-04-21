@@ -35,7 +35,7 @@ Flag --> picoCTF{p33kab00_1_s33_u_deadbeef}
 - The files were `instructions.txt`, `plan`, `program.deb`, `picture1.bmp`, `picture2.bmp`, and `picture3.bmp`.
 - Lets analze each file.
 
-### instructions.txt
+### Instructions.txt
 
 ```
 GSGCQBRFAGRAPELCGBHEGENSSVPFBJRZHFGQVFTHVFRBHESYNTGENAFSRE.SVTHERBHGNJNLGBUVQRGURSYNTNAQVJVYYPURPXONPXSBEGURCYNA
@@ -75,7 +75,7 @@ IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS
 I USED THE PROGRAM AND HID IT WITH - DUEDILIGENCE. CHECK OUT THE PHOTOS
 ```
 
-### Program
+### Program.deb
 
 - After extracting `program.deb` we shall find that it has the files related to `steghide`.
 - So now let's use `steghide` to `analyse` the `bmp` files.
