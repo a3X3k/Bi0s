@@ -8,7 +8,7 @@
 | [Trivial Flag Transfer Protocol](https://github.com/a3X3k/Bi0s/tree/master/CTFs/Pico21/Trivial%20FTP) | Forensics - Steganography | Wireshark - Steghide |
 | [MacroHard WeakEdge](https://github.com/a3X3k/Bi0s/tree/master/CTFs/Pico21/MacroHard%20WeakEdge) | Steganography | Base64 |
 | [Disk, disk, slueth!](https://github.com/a3X3k/Bi0s/tree/master/CTFs/Pico21/Disk%2C%20disk%2C%20slueth!) | Forensics | Strings |
-| [https://github.com/a3X3k/Bi0s/tree/master/CTFs/Pico21/Disk%2C%20disk%2C%20slueth!](https://github.com/a3X3k/Bi0s/tree/master/CTFs/Pico21/Disk%2C%20disk%2C%20slueth!%20II) | Forensics | Mount |
+| [Disk, disk, slueth! II](https://github.com/a3X3k/Bi0s/tree/master/CTFs/Pico21/Disk%2C%20disk%2C%20slueth!%20II) | Forensics | Mount |
 
 
 </div>
