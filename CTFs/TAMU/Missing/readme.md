@@ -26,7 +26,7 @@ Hey! I'm hosting a retreat for my clients so I'll be off the grid for awhile - I
 - I understood that its a voice mail. 
 - So I called again with recording on. 
 - Then I played the audio thrice to understand.
-- Thats basically the `https` link [Eowensphotography](eowensphotography.weebly.com).
+- Thats basically the `https` link [`Eowensphotography`](eowensphotography.weebly.com).
 - Paste it in URL bar and OSINT the site. 
 - You will see the section `Where Am I?`. 
 - There you will get the flag.
