@@ -20,7 +20,8 @@
 
 - Rounding up to three decimals both gives, `35.898,14.518` and `43.938,12.446` respectively.
 
-
 ```
 flag{35.898,14.518,43.938,12.446}
 ```
+
+- **Thanks** to [`@Sampath`](https://github.com/sai1274)
