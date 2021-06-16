@@ -27,7 +27,8 @@
 - So the third Image is [`Ruta 40, Carrer de la Callissa S/Numero, Arinsal AD400 Andorra`](https://goo.gl/maps/XXjktYYveq3tBpus7) - `42.5692° N, 1.4893° E`
 - Rounding up to three decimals both gives, `42.569,1.489`.
 
-
 ```
 flag{47.504,19.045,53.62,11.41,42.569,1.489}
 ```
+
+- **Thanks** to [`@Sampath`](https://github.com/sai1274)
