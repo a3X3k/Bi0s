@@ -23,5 +23,3 @@
 ```
 flag{35.898,14.518,43.938,12.446}
 ```
-
-- **Thanks** to [`@Sampath`](https://github.com/sai1274)
