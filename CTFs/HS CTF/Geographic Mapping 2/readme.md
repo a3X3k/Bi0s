@@ -31,4 +31,4 @@
 flag{47.504,19.045,53.62,11.41,42.569,1.489}
 ```
 
-- **Thanks** to [`@Sampath`](https://github.com/sai1274)
+## Thanks to [`@Sampath`](https://github.com/sai1274)
