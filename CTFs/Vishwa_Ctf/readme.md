@@ -1,19 +1,19 @@
 # Forensics
 ### Barcode Scanner
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/1.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/1.png?raw=true)
  - Download the Image given.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/2.jpg?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/2.jpg?raw=true)
 
 - Use Stegsolve and invert the colors.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/3.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/3.png?raw=true)
 
 - This will be the final image which u get.
 - Then use `zbarimg` tool to extract text from the `Barcode`.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/4.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/4.png?raw=true)
 
 ```sh
 Flag --> vishwaCTF{5oo_3ASy}
@@ -21,7 +21,7 @@ Flag --> vishwaCTF{5oo_3ASy}
 
 ### Peace
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/5.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/5.png?raw=true)
 
 - Download the `rar` file given.
 - Crack the `rar password` using `rar2john`.
@@ -32,7 +32,7 @@ rar2john morse.rar > ki.txt
 
 - `unrar` the `rar` file using password `india`
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/6.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/6.png?raw=true)
 
 - We will get a `morse encrypted audio` file.
 - Use `morse decoder` to `decode` the content.
@@ -50,11 +50,11 @@ Flag --> vishwactf{7h3y_4rE_F0r3fe71ng}
 
 ### Sherlock
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/7.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/7.png?raw=true)
 
 - Download the Image File given.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/8.jpg?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/8.jpg?raw=true)
 
 - From the `Magic Numbers` we shall find that the given image is actually a `png` format.
 - But we get it as `jpg`.
@@ -65,7 +65,7 @@ Flag --> vishwactf{7h3y_4rE_F0r3fe71ng}
 zsteg -a decode.png
 ```
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/9.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/9.png?raw=true)
 
 ```sh
 Flag --> vishwaCTF{@w3s0Me_sh3Rl0cK_H0m3s}
@@ -73,12 +73,12 @@ Flag --> vishwaCTF{@w3s0Me_sh3Rl0cK_H0m3s}
 
 ### Comments
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/10.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/10.png?raw=true)
 
 - Download the given `docx` file.
 - Use `cat` command with `pipe` and `grep` to see the `contents`.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/12.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/12.png?raw=true)
 
 ```sh
 Flag --> vishwaCTF{comm3nts_@r3_g00d}
@@ -86,11 +86,11 @@ Flag --> vishwaCTF{comm3nts_@r3_g00d}
 
 ### Bubblegum
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/13.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/13.png?raw=true)
 
 - Download the given `Audio` File.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/14.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/14.png?raw=true)
 
 - Open the given audio file in `audacity`.
 - Upon analysing it, we find this `0.55-1.07` which could be a hint.
@@ -104,14 +104,14 @@ Flag --> vishwaCTF{oh bubble gum dear im yours forever i would never let them ta
 
 - Download the files given.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/16.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/16.png?raw=true)
 
 - Download the files given.
 - Using `registry viewer` `analyse` the file2.
 - Go through the `accounts` folder.
 - In key `properties` tab we can see the `last password updated time`.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/19.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/19.png?raw=true)
 
 ```sh
 Flag --> vishwaCTF{thursday_january_10_08_24_36_2013}
@@ -119,17 +119,17 @@ Flag --> vishwaCTF{thursday_january_10_08_24_36_2013}
 
 ### Recovery
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/17.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/17.png?raw=true)
 
 - `Download` the `files` given.
 - Using `registry viewer` `analyse` the file2.
 - Go through the `accounts` folder.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/21.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/21.png?raw=true)
 
 - Under `users` we can see `shreyas account` details but we will not able see the `password hash` without uploading the `syskey` file.
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/20.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/20.png?raw=true)
 
 - The `file1` is the `syskey` for the `file2` after uploading the `syskey` in `registry viewer` we will able to see the the `hash key` and more details in `key properties`.
 - So using `samdump2` dump all the `username` and `password` `hash`.
@@ -138,7 +138,7 @@ Flag --> vishwaCTF{thursday_january_10_08_24_36_2013}
 samdump2 file1 file2 > hashes.txt
 ```
 
-![](https://github.com/a3x3k/Bi0s/CTFs/blob/master/Vishwa_Ctf/Assets/23.png?raw=true)
+![](https://github.com/a3x3k/Bi0s/blob/master/CTFs/Vishwa_Ctf/Assets/23.png?raw=true)
 
 - Created a wordlist using python script `cupp.py` with hints given in description 
 
